@@ -56,3 +56,13 @@ function changeButton(id) {
     
 }
 
+function restart(){
+    document.getElementById('quantity').value ='';
+    document.getElementById('from').value = '';
+    document.getElementById('until').value = '';
+    document.getElementById('result').innerHTML = '<label class="text_paragraph">Drawn numbers:  None so far</label>'
+
+    changeButton('btn-reset');
+
+}
+
