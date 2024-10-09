@@ -10,6 +10,7 @@ function raffle() {
     let number; 
     let drawn = [];
 
+
     for (let index = 0; index < quantity; index++ ) {
         number = getRndInteger(from, until);
         
@@ -28,8 +29,11 @@ function raffle() {
 }
 
 function getRndInteger(min, max){
-
-    return Math.floor(Math.random() * (max - min))  + min;
+    //return Math.floor(Math.random() * (max - min))  + min;
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
+      
 
 }
 
