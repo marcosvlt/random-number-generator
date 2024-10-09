@@ -10,7 +10,11 @@ function raffle() {
     let number; 
     let drawn = [];
 
+    if (until < quantity) {
+        return alert("Select quantity smaller than until");
+    }
 
+        
     for (let index = 0; index < quantity; index++ ) {
         number = getRndInteger(from, until);
         
@@ -54,3 +58,4 @@ function enableButton(id) {
     }
     
 }
+
