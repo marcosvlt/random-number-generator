@@ -23,6 +23,7 @@ function raffle() {
 
     // console.log(`drawn = ${drawn}` );
     resultChange(drawn);
+    enableButton('btn-reset');
  
 }
 
@@ -36,5 +37,16 @@ function resultChange(draw) {
 
     let result = document.getElementById('result');
     result.innerHTML = `<label class="text_paragraph">Drawn numbers: ${draw}</label>`;
+    
+}
+
+function enableButton(id) {
+    let field = document.getElementById(id);
+    if (field.classList.contains('container__button-disabled')) {
+        field.classList.replace("container__button-disabled","container__button");
+        
+    } else {
+        
+    }
     
 }
