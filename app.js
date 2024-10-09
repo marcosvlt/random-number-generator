@@ -2,11 +2,7 @@ function raffle() {
     let quantity = parseInt(document.getElementById('quantity').value);
     let from = parseInt(document.getElementById('from').value);
     let until = parseInt(document.getElementById('until').value);
-
-    // console.log(`quantity = ${quantity}` );
-    // console.log(`from = ${from}` );
-    // console.log(`until = ${until}` );
-
+    
     let number; 
     let drawn = [];
 
@@ -26,14 +22,13 @@ function raffle() {
         
     }
 
-    // console.log(`drawn = ${drawn}` );
     resultChange(drawn);
-    enableButton('btn-reset');
+    changeButton('btn-reset');
  
 }
 
 function getRndInteger(min, max){
-    //return Math.floor(Math.random() * (max - min))  + min;
+    
     const minCeiled = Math.ceil(min);
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
@@ -48,12 +43,14 @@ function resultChange(draw) {
     
 }
 
-function enableButton(id) {
+function changeButton(id) {
     let field = document.getElementById(id);
     if (field.classList.contains('container__button-disabled')) {
         field.classList.replace("container__button-disabled","container__button");
         
     } else {
+        field.classList.replace("container__button","container__button-disabled");
+
         
     }
     
