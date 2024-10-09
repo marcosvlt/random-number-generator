@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence:BLED,XELA@49,-100..100&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <title>Random number generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__content">
+            <div class="container__info">
+                <div class="container__text">
+                    <h1>Random<span class="container__text-blue"> number generator</span></h1>
+
+                    <div class="container__field">
+                        <label class="text_paragraph">Quantity of numbers</label>
+                        <input class="container__input" id="quantidade" type="number" min="1">
+                    </div>
+                    
+                    <div class="container__field">
+                        <label class="text_paragraph">From</label>
+                        <input class="container__input" id="de" type="number" min="1">
+                    </div>
+                    
+                    <div class="container__field">
+                        <label class="text_paragraph">Until</label>
+                        <input class="container__input" id="ate" type="number" min="1">
+                    </div>
+                </div>
+                
+                <div class="chute container__buttons">
+                    <button onclick="raffle()" id="btn-sortear" class="container__button">Raffle</button>
+                    <button onclick="restart()" id="btn-reiniciar" class="container__button-disabled" >Restart</button>
+                </div>
+
+                <div class="container__text" id="resultado">
+                    <label class="text_paragraph">Drawn numbers:  None so far</label>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>
