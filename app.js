@@ -10,6 +10,13 @@ function raffle() {
         return alert("Select quantity smaller than until");
     }
 
+    if (from > until){
+        return alert("Select from smaller than until");
+    }
+
+    if (quantity > (until - from +1)){
+        alert(' Quantity must be lower or equal than range from until');
+    }
         
     for (let index = 0; index < quantity; index++ ) {
         number = getRndInteger(from, until);
